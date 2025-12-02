@@ -1,25 +1,26 @@
-img {
-    width: 100%;
+.nosotros-blancoynegro {
+    background-image: url("nosotros.jpg");
+    padding: 5%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.fader {
-	position: relative;
-	width: 100%;
-}
-.fader::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-image: linear-gradient(180deg, transparent 0 30%, #FFF 70% 100%);
+.nombres {
+    font-family: "Mr De Haviland";
+position: relative;
+    font-size: 234px;
+    color: white;
+    -webkit-text-stroke: 2px black; 
 }
 
-.fader img {
-	width: 100%;
+.poiret-one-regular {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-:root{
+
+/*:root{
       --bg:#faf7f5;
       --card:#ffffff;
       --accent:#a36b5a;
@@ -32,9 +33,9 @@ img {
 
     *{box-sizing:border-box}
     body{
-      margin:0; background:linear-gradient(180deg,var(--bg),#10e917); color:var(--muted);
+      margin:0; background:linear-gradient(180deg,var(--bg),#f7d2d2); color:var(--muted);
       display:flex; align-items:center; justify-content:center; min-height:100vh;
-      padding:32px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      padding:5%; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
     }
 
     .wrap{
@@ -71,7 +72,6 @@ img {
     .cd-num{font-size:20px; font-weight:700; color:var(--accent)}
     .cd-label{font-size:12px; color:var(--muted); margin-top:4px}
 
-    /* right column */
     aside{padding:18px; border-radius:12px; background:linear-gradient(180deg,#fff,#fff); align-self:start}
     .card{margin-bottom:14px}
     .card h3{margin:0 0 8px 0; font-size:16px; color:#4c2f2a}
@@ -92,9 +92,7 @@ img {
 
     footer{margin-top:18px; font-size:13px; color:var(--muted)}
 
-    /* animation helpers — ready for JS */
     .will-animate{opacity:0; transform:translateY(8px)}
     .animated{opacity:1; transform:none; transition:all 700ms cubic-bezier(.2,.9,.2,1)}
 
-    /* small aesthetic touches */
-    .small{font-size:13px}
+    .small{font-size:13px} */
