@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wedding Invitation — [Names]</title>
+  <style>
+    :root{
+      --bg:#faf7f5;
+      --card:#ffffff;
+      --accent:#a36b5a;
+      --muted:#6b6b6b;
+      --max-width:980px;
+      --radius:18px;
+      --glass: rgba(255,255,255,0.6);
+      font-family: 'Segoe UI', Roboto, system-ui, -apple-system, 'Helvetica Neue', Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0; background:linear-gradient(180deg,var(--bg),#fff); color:var(--muted);
+      display:flex; align-items:center; justify-content:center; min-height:100vh;
+      padding:32px; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      width:100%; max-width:var(--max-width); background:var(--card); border-radius:24px; padding:28px;
+      box-shadow:0 10px 30px rgba(20,20,30,0.08); display:grid; grid-template-columns:1fr 380px; gap:24px;
+    }
+
+    @media (max-width:880px){
+      .wrap{grid-template-columns:1fr; padding:20px}
+    }
+
+    header{display:flex; gap:18px; align-items:center}
+    .logo{
+      width:76px; height:76px; border-radius:14px; background:linear-gradient(135deg,var(--accent),#c27c68);
+      display:grid; place-items:center; color:white; font-weight:700; font-size:18px; box-shadow:0 6px 18px rgba(160,100,80,0.12);
+    }
+
+    h1{margin:0; font-size:22px; color:#4c2f2a}
+    .sub{margin-top:6px; color:var(--muted); font-size:14px}
+
+    .content{padding-right:6px}
+
+    .hero{
+      margin-top:18px; padding:18px; border-radius:14px; background:linear-gradient(180deg,var(--glass),rgba(255,255,255,0.85));
+      backdrop-filter: blur(6px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.6);
+    }
+
+    .desc{line-height:1.6; color:#545454}
+
+    .countdown{
+      margin-top:18px; display:flex; gap:10px; align-items:center; flex-wrap:wrap
+    }
+    .cd-item{background:#fff; padding:12px 14px; border-radius:10px; min-width:84px; text-align:center; box-shadow:0 6px 18px rgba(80,40,30,0.06)}
+    .cd-num{font-size:20px; font-weight:700; color:var(--accent)}
+    .cd-label{font-size:12px; color:var(--muted); margin-top:4px}
+
+    /* right column */
+    aside{padding:18px; border-radius:12px; background:linear-gradient(180deg,#fff,#fff); align-self:start}
+    .card{margin-bottom:14px}
+    .card h3{margin:0 0 8px 0; font-size:16px; color:#4c2f2a}
+    .card p{margin:0; font-size:14px}
+
+    .bank{
+      font-family:monospace; background:#f9f6f6; padding:12px; border-radius:8px; font-size:13px; color:#3b3b3b; word-break:break-all
+    }
+
+    .map{
+      width:100%; height:220px; border-radius:10px; overflow:hidden; border:1px solid rgba(0,0,0,0.06)
+    }
+
+    .actions{display:flex; gap:8px; margin-top:12px}
+    .btn{background:var(--accent); color:white; padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:600}
+
+    footer{margin-top:18px; font-size:13px; color:var(--muted)}
+
+    /* animation helpers — ready for JS */
+    .will-animate{opacity:0; transform:translateY(8px)}
+    .animated{opacity:1; transform:none; transition:all 700ms cubic-bezier(.2,.9,.2,1)}
+
+    /* small aesthetic touches */
+    .small{font-size:13px}
+  </style>
+</head>
+<body>
+  <main class="wrap" id="invitation">
+    <section class="content">
+      <header>
+        <div class="logo" aria-hidden="true">❤</div>
+        <div>
+          <h1>[Name A] &amp; [Name B]</h1>
+          <div class="sub">Join us to celebrate — <strong id="wdate">June 21, 2026</strong></div>
+        </div>
+      </header>
+
+      <div class="hero will-animate" data-animate>
+        <p class="desc">We would be honored to have you with us on our special day. There will be food, music and lots of dancing. Please RSVP by email or phone. Below you will find the ceremony location, a countdown to the wedding, and bank details if you'd like to send a present.</p>
+
+        <div class="countdown" aria-live="polite" role="timer" title="Countdown to wedding" data-countdown="2026-06-21T15:00:00">
+          <div class="cd-item"><div class="cd-num" id="days">--</div><div class="cd-label">Days</div></div>
+          <div class="cd-item"><div class="cd-num" id="hours">--</div><div class="cd-label">Hours</div></div>
+          <div class="cd-item"><div class="cd-num" id="minutes">--</div><div class="cd-label">Minutes</div></div>
+          <div class="cd-item"><div class="cd-num" id="seconds">--</div><div class="cd-label">Seconds</div></div>
+        </div>
+
+        <div class="small" style="margin-top:12px">Ceremony: <strong>[Church / Hall Name]</strong> — Doors open at 14:30</div>
+      </div>
+
+      <div class="will-animate" data-animate style="margin-top:18px">
+        <h2 style="margin:0 0 8px 0; color:#4c2f2a">A few words</h2>
+        <p class="desc">We met on a rainy evening and discovered we both loved very bad coffee and long walks. Now we look forward to gathering our family and friends to start the next chapter together. Your presence is the best gift — but if you'd like to help with our honeymoon fund, banking details are on the right.</p>
+      </div>
+
+      <footer class="small">Need help? <a href="mailto:youremail@example.com">youremail@example.com</a> • Phone: +1 (555) 123-4567</footer>
+    </section>
+
+    <aside>
+      <div class="card will-animate" data-animate>
+        <h3>Location</h3>
+        <p class="small">[Venue Name]<br>[Street Address]<br>[City, Country]</p>
+        <div class="map" aria-hidden="false">
+          <!-- Replace the src value below with your Google Maps Embed URL for the event location. -->
+          <iframe id="gmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0869566049473!2d-122.08560908468183!3d37.42199977982516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5e0b7c2a6b9%3A0x5a2a3e1f9b4d2b0a!2sGoogleplex!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="actions small">
+          <a class="btn" href="#gmap" onclick="(function(){document.getElementById('gmap').scrollIntoView({behavior:'smooth'});})();return false;">Open map</a>
+          <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=37.4220,-122.0841" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+
+      <div class="card will-animate" data-animate>
+        <h3>Banking / Presents</h3>
+        <p class="small">If you'd like to contribute to our honeymoon fund or wedding gift, you can use the details below. Please include your name in the reference so we can thank you!</p>
+        <div class="bank">
+          Account name: <strong>[Full Name]</strong><br>
+          Bank: <strong>[Bank Name]</strong><br>
+          IBAN: <strong>XX00 0000 0000 0000 0000</strong><br>
+          SWIFT/BIC: <strong>XXXXX</strong>
+        </div>
+      </div>
+
+      <div class="card will-animate" data-animate>
+        <h3>RSVP</h3>
+        <p class="small">Please RSVP by <strong>May 15, 2026</strong>. Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    // --- Countdown logic (editable by changing data-countdown on the .countdown element) ---
+    (function(){
+      const countdownEl = document.querySelector('[data-countdown]');
+      if(!countdownEl) return;
+      const targetISO = countdownEl.getAttribute('data-countdown');
+      const targetDate = new Date(targetISO);
+      const daysEl = document.getElementById('days');
+      const hoursEl = document.getElementById('hours');
+      const minutesEl = document.getElementById('minutes');
+      const secondsEl = document.getElementById('seconds');
+      const wdate = document.getElementById('wdate');
+      if(wdate) wdate.textContent = targetDate.toLocaleDateString(undefined, {year:'numeric', month:'long', day:'numeric'});
+
+      function update(){
+        const now = new Date();
+        let diff = Math.max(0, targetDate - now);
+        const sec = Math.floor(diff/1000) % 60;
+        const min = Math.floor(diff/1000/60) % 60;
+        const hr = Math.floor(diff/1000/60/60) % 24;
+        const day = Math.floor(diff/1000/60/60/24);
+        daysEl.textContent = String(day).padStart(2,'0');
+        hoursEl.textContent = String(hr).padStart(2,'0');
+        minutesEl.textContent = String(min).padStart(2,'0');
+        secondsEl.textContent = String(sec).padStart(2,'0');
+
+        if(diff<=0){
+          // event started — change message
+          countdownEl.innerHTML = '<div style="padding:14px; font-weight:700; color:var(--accent)">Today is the day — welcome!</div>';
+          clearInterval(tInt);
+        }
+      }
+      update();
+      const tInt = setInterval(update, 1000);
+    })();
+
+    // --- Simple JS animation starter using the Web Animations API ---
+    (function(){
+      function animateIntro(){
+        const els = document.querySelectorAll('[data-animate]');
+        els.forEach((el, i)=>{
+          // give elements a stagger
+          setTimeout(()=>{
+            el.classList.add('animated');
+            // additional animation using Web Animations API (subtle pop)
+            try{
+              el.animate([
+                { transform: 'translateY(8px) scale(.995)', opacity: 0 },
+                { transform: 'translateY(0) scale(1)', opacity: 1 }
+              ], { duration: 700, easing: 'cubic-bezier(.2,.9,.2,1)', fill: 'forwards' });
+            }catch(e){/* fallback */}
+          }, i*120);
+        });
+      }
+      // run on load
+      if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', animateIntro); else animateIntro();
+
+      // expose a hook for custom animations (for example, from your own JS or GSAP)
+      window.animateInvitation = animateIntro;
+    })();
+
+    // Accessibility focus: make interactive buttons keyboard-friendly
+    (function(){
+      document.querySelectorAll('.btn').forEach(b=>b.addEventListener('keydown', e=>{ if(e.key === 'Enter') b.click(); }));
+    })();
+  </script>
+</body>
+</html>
