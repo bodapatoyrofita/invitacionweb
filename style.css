@@ -16,6 +16,11 @@ body {
       -moz-osx-font-smoothing:grayscale;*/
     }
 
+h1 { font-size: 3.5em; }
+h2 { font-size: 2.7em; }
+h3 { font-size: 2em; }
+p { font-size: 1.25em; }
+
 .nosotros-blancoynegro {
     background-image: url("nosotros.jpg");
     padding: 5%;
@@ -25,8 +30,7 @@ body {
 
 .nombres {
     font-family: "Mr De Haviland";
-position: relative;
-    font-size: 3.5em;
+    position: center;
     color: white;
     -webkit-text-stroke: 0.5px black; 
 }
