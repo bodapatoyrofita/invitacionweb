@@ -21,6 +21,27 @@ h2 { font-size: 2.7em; }
 h3 { font-size: 2em; }
 p { font-size: 1.25em; }
 
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+header {
+  background-color: bisque;
+}
+
+header .logo {
+  margin: 0;
+  padding: 25px 50px;
+  font-weight: bold;
+}
+
+header .container, header .fecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .nosotros-blancoynegro {
     background-image: url("nosotros.jpg");
     padding: 5%;
