@@ -27,18 +27,20 @@ p { font-size: 1.25em; }
 }
 
 header {
-  background-color: bisque;
+  background-color: #F6F4F2;
 }
 
 header .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
 }
 
 header .logo {
   margin: 0;
-  padding: 25px 30px;
+  padding: 10px;
   font-weight: bold;
   text-shadow: 2px 2px 10px red;
 }
@@ -48,10 +50,8 @@ header .logo:hover {
 }
 
 header .fecha {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 25px;
+  margin: 0;
+  padding-left: 10px;
   font-weight: bold;
 }
 
@@ -70,13 +70,19 @@ header .fecha {
     justify-content: end;
     text-align: center;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+#nosotros-blancoynegro h1 {
+  padding: 0;
+  margin: 0;
 }
 
 .nombres {
   font-family: "Mr De Haviland";
-  color: red;
+  color: #DCC8B4;
   font-size: 6em;
-/*-webkit-text-stroke: 0.5px black; */
+/*-webkit-text-stroke: 0.5px black;   #DCC8B4      #F6F4F2    #FFFFFF */
 }
 
 .poiret-one-regular {
