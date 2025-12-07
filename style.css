@@ -95,6 +95,23 @@ header .fecha {
       margin-top:18px; display:flex; gap:10px; align-items:center; flex-wrap:wrap
     }
 
+
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(-20px); 
+  animation: fadeIn 3s ease-in forwards; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 /*:root{
       --bg:#faf7f5;
       --card:#ffffff;
