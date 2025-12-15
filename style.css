@@ -28,6 +28,9 @@ p { font-size: 1.25em; color: #123524; }
 
 header {
   background-color: #CED9D2;
+  position: sticky;
+  top: 0;
+  z-index: 9999
 }
 
 header .container {
@@ -159,6 +162,10 @@ header .fecha {
   text-align: center;
   flex-direction: column;
   background-color: #CED9D2;
+}
+
+#los-tilos {
+  width: 80%;
 }
 
 
