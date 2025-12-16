@@ -180,7 +180,7 @@ header .fecha {
   background-color: #CED9D2;
 }
 
-#ubicacion h2 {
+#ubicacion h2, #vestimenta h2, #regalos h2 {
   margin: 17px;
 }
 
@@ -222,6 +222,46 @@ header .fecha {
 
 .rubberBand {
   animation-name: rubberBand;
+}
+
+#vestimenta {
+    padding: 15px;
+padding-top: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  flex-direction: column;
+}
+
+.patos {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  flex-direction: row;
+}
+
+#patos-img {
+  width: 80%;
+  border: 2px solid #5A4130;
+  box-shadow: 10px 10px 5px #aaaaaa
+}
+
+
+#regalos {
+  padding: 15px;
+    padding-top: 0;
+
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  flex-direction: column;
+    background-color: #CED9D2;
+
 }
 /*:root{
       --bg:#faf7f5;
