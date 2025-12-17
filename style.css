@@ -234,6 +234,11 @@ padding-top: 0;
   text-align: center;
   flex-direction: column;
 }
+#vestimenta h3 {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 15px;
+}
 
 .patos {
   display: flex;
@@ -260,9 +265,42 @@ padding-top: 0;
   justify-content: end;
   text-align: center;
   flex-direction: column;
-    background-color: #CED9D2;
+  background-color: #CED9D2;
+}
+
+#regalos p, #regalos h3 {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+#cuentas {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  flex-direction: row;
+}
+
+#regalo-left {
+  width: 30%;
+  animation: headShake 5s infinite;
 
 }
+
+#regalo-right {
+  width: 30%;
+
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 1s;
+  --animate-delay: 3s;
+}
+
+
+
 /*:root{
       --bg:#faf7f5;
       --card:#ffffff;
