@@ -1,26 +1,33 @@
 * {
-  box-sizing:border-box
+  box-sizing: border-box
 }
-    
-body {
-    padding: 0;  
-    margin:0; 
-      background:linear-gradient(180deg,var(--bg),#f7d2d2);
-      font-family: "Poiret One", sans-serif;
-      /*color:var(--muted);
-      display:flex; 
-      align-items:center; 
-      justify-content:center; 
-      min-height:100vh;
-      padding:5%; 
-      -webkit-font-smoothing:antialiased; 
-      -moz-osx-font-smoothing:grayscale;*/
-    }
 
-h1 { font-size: 3.5em; color: #123524; }
-h2 { font-size: 2.7em; color: #123524; }
-h3 { font-size: 2em; color: #123524; }
-p { font-size: 1.25em; color: #123524; }
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg), #f7d2d2);
+  font-family: "Poiret One", sans-serif;
+}
+
+h1 {
+  font-size: 3.5em;
+  color: #123524;
+}
+
+h2 {
+  font-size: 2.7em;
+  color: #123524;
+}
+
+h3 {
+  font-size: 2em;
+  color: #123524;
+}
+
+p {
+  font-size: 1.25em;
+  color: #123524;
+}
 
 .container {
   max-width: 1400px;
@@ -37,10 +44,10 @@ header {
 
 header .container {
   display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
 }
 
 header .logo {
@@ -49,6 +56,7 @@ header .logo {
   font-weight: bold;
   text-shadow: 3px 3px 2px #a5b8ac;
 }
+
 header #cora {
   height: 33px;
   animation: headShake 5s infinite;
@@ -58,28 +66,27 @@ header .fecha {
   margin: 0;
   padding: 10px;
   font-weight: bold;
-    text-shadow: 3px 3px 2px #a5b8ac;
+  text-shadow: 3px 3px 2px #a5b8ac;
 
 }
 
 #nosotros-blancoynegro {
-    background-image: linear-gradient(
-      0deg,
+  background-image: linear-gradient(0deg,
       rgba(0, 0, 0, 0.8) 5%,
-      rgba(0, 0, 0, 0) 100%
-    ), url("nosotros.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    text-align: center;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+      rgba(0, 0, 0, 0) 100%), url("nosotros.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
+
 #nosotros-blancoynegro h1 {
   padding-bottom: 10px;
   margin: 0;
@@ -89,7 +96,6 @@ header .fecha {
   font-family: "Mr De Haviland";
   color: #DCC8B4;
   font-size: 6em;
-/*-webkit-text-stroke: 0.5px black;   #DCC8B4      #F6F4F2    #FFFFFF */
 }
 
 .poiret-one-regular {
@@ -105,37 +111,62 @@ header .fecha {
   font-style: normal;
 }
 
-.countdown { 
-  display:flex; gap:25px; align-items:center; flex-wrap:wrap;
+.countdown {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .cd-item {
-  opacity: 0; 
-  background:#F3D9D2; 
-  padding:12px 14px; 
-  border-radius:10px; 
-  min-width:84px; 
-  text-align:center; 
-  box-shadow:5px 5px 3px #5A4130}
+  opacity: 0;
+  background: #F3D9D2;
+  padding: 12px 14px;
+  border-radius: 10px;
+  min-width: 84px;
+  text-align: center;
+  box-shadow: 5px 5px 3px #5A4130
+}
 
 .cd-is-visible {
   animation: pop-in 1.5s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
 }
-.cd-num{font-size:20px; font-weight:700; color:var(--accent)}
-.cd-label{font-size:12px; color:var(--muted); margin-top:4px}
-.cd-item:nth-child(1) { animation-delay: 0.5s;}
-.cd-item:nth-child(2) { animation-delay: 1s;}
-.cd-item:nth-child(3) { animation-delay: 1.5s;}
+
+.cd-num {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent)
+}
+
+.cd-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 4px
+}
+
+.cd-item:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.cd-item:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.cd-item:nth-child(3) {
+  animation-delay: 1.5s;
+}
 
 @keyframes pop-in {
   0% {
     opacity: 0;
     transform: scale(0.1);
   }
+
   60% {
     opacity: 1;
-    transform: scale(1.1); /* Slightly larger than final size for a bounce effect */
+    transform: scale(1.1);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -144,14 +175,15 @@ header .fecha {
 
 .fade-in-text {
   opacity: 0;
-  transform: translateY(-30px); 
-  animation: fadeIn 2s ease-in forwards; 
+  transform: translateY(-30px);
+  animation: fadeIn 2s ease-in forwards;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
     transform: translateY(0px);
@@ -180,11 +212,14 @@ header .fecha {
   background-color: #CED9D2;
 }
 
-#ubicacion h2, #vestimenta h2, #regalos h2 {
+#ubicacion h2,
+#vestimenta h2,
+#regalos h2 {
   margin: 17px;
 }
 
-#los-tilos, #mapa-img {
+#los-tilos,
+#mapa-img {
   width: 80%;
   border: 2px solid #5A4130;
   box-shadow: 10px 10px 5px #aaaaaa
@@ -225,8 +260,8 @@ header .fecha {
 }
 
 #vestimenta {
-    padding: 15px;
-padding-top: 0;
+  padding: 15px;
+  padding-top: 0;
   margin: 0;
   display: flex;
   align-items: center;
@@ -234,6 +269,7 @@ padding-top: 0;
   text-align: center;
   flex-direction: column;
 }
+
 #vestimenta h3 {
   padding: 0;
   margin: 0;
@@ -257,7 +293,7 @@ padding-top: 0;
 
 #regalos {
   padding: 15px;
-    padding-top: 0;
+  padding-top: 0;
 
   margin: 0;
   display: flex;
@@ -268,7 +304,8 @@ padding-top: 0;
   background-color: #CED9D2;
 }
 
-#regalos p, #regalos h3 {
+#regalos p,
+#regalos h3 {
   font-weight: bold;
   padding: 0;
   margin: 0;
@@ -285,14 +322,94 @@ padding-top: 0;
 
 #regalo-left {
   width: 30%;
-  animation: headShake 5s infinite;
-
 }
 
 #regalo-right {
   width: 30%;
-
 }
+
+.animacion-regalo {
+  animation: bounce-in-fwd 1s, shake-bottom 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
+}
+
+@keyframes shake-bottom {
+
+  30%,
+  80% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+
+  35% {
+    transform: rotate(2deg);
+  }
+
+  40%,
+  50%,
+  60% {
+    transform: rotate(-4deg);
+  }
+
+  45%,
+  55%,
+  65% {
+    transform: rotate(4deg);
+  }
+
+  70% {
+    transform: rotate(-2deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes bounce-in-fwd {
+  0% {
+    transform: scale(0);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  38% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+
+  55% {
+    transform: scale(0.7);
+    animation-timing-function: ease-in;
+  }
+
+  72% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+
+  81% {
+    transform: scale(0.84);
+    animation-timing-function: ease-in;
+  }
+
+  89% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+
+  95% {
+    transform: scale(0.95);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+
+
 
 
 /*:root{

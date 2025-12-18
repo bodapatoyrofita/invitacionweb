@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("pop-from-left");
+          entry.target.classList.add("animacion-regalo");
           observer.unobserve(entry.target); // animate once
         }
       });
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("pop-from-right");
+          entry.target.classList.add("animacion-regalo");
           observer.unobserve(entry.target); // animate once
         }
       });
