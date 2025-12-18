@@ -294,12 +294,6 @@ padding-top: 0;
 
 }
 
-.animate__animated.animate__bounce {
-  --animate-duration: 1s;
-  --animate-delay: 3s;
-}
-
-
 
 /*:root{
       --bg:#faf7f5;
