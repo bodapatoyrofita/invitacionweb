@@ -329,59 +329,15 @@ header .fecha {
 }
 
 .animacion-regalo {
-  animation: bounce-in-fwd 2s, shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
-}
-
-@keyframes bounce-in-fwd {
-  0%, 50% {
-    transform: scale(0);
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-
-  69% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-
-  77.5% {
-    transform: scale(0.7);
-    animation-timing-function: ease-in;
-  }
-
-  86% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
-
-  90.5% {
-    transform: scale(0.84);
-    animation-timing-function: ease-in;
-  }
-
-  94.5% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
-
-  97.5% {
-    transform: scale(0.95);
-    animation-timing-function: ease-in;
-  }
-
-  100% {
-    transform: scale(1);
-    animation-timing-function: ease-out;
-  }
+  animation: shake-bottom 5s cubic-bezier(0.455, 0.030, 0.515, 0.955) both infinite;
 }
 
 @keyframes shake-bottom {
-
   30%,
   80% {
     transform: rotate(0deg);
     transform-origin: 50% 100%;
+    opacity: 1;
   }
 
   35% {
