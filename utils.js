@@ -57,3 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach(el => observer.observe(el));
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".pato-swing");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("swing-in-top-fwd");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.5 // 20% visible before triggering
+    }
+  );
+
+  elements.forEach(el => observer.observe(el));
+});
