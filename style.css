@@ -284,6 +284,10 @@ header .fecha {
   flex-direction: row;
 }
 
+.pato-swing {
+  opacity: 0;
+}
+
 .pato-swing:nth-child(2) {
   animation-delay: 0.5s;
 }

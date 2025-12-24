@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.5 // 20% visible before triggering
+      threshold: 0.2 // 20% visible before triggering
     }
   );
 
