@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("rotate-in-2-fwd-cw");
+          entry.target.classList.add("scale-in-center");
           observer.unobserve(entry.target); // animate once
         }
       });
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("rotate-in-2-fwd-cw");
+          entry.target.classList.add("scale-in-center");
           observer.unobserve(entry.target); // animate once
         }
       });
