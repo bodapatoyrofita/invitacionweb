@@ -71,7 +71,47 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     },
     {
-      threshold: 0.75,
+      threshold: 0.3,
+    }
+  );
+
+  elements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll("#los-tilos");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("rotate-in-2-fwd-cw");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+    }
+  );
+
+  elements.forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll("#mapa-img");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("rotate-in-2-fwd-cw");
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    {
+      threshold: 0.3,
     }
   );
 

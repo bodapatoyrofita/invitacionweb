@@ -223,8 +223,27 @@ header .fecha {
 #mapa-img {
   width: 80%;
   border: 2px solid #5A4130;
-  box-shadow: 10px 10px 5px #aaaaaa
+  box-shadow: 10px 10px 5px #aaaaaa;
+      opacity: 0;
+
 }
+
+.rotate-in-2-fwd-cw {
+	        animation: rotate-in-2-fwd-cw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes rotate-in-2-fwd-cw {
+  0% {
+            transform: translateZ(-200px) rotate(-45deg);
+    opacity: 0;
+  }
+  100% {
+            transform: translateZ(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+
 
 @keyframes headShake {
   from {
