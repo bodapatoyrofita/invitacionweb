@@ -24,6 +24,11 @@ h3 {
   color: #123524;
 }
 
+h4 {
+  font-size: 1.5em;
+  color: #123524;
+}
+
 p {
   font-size: 1.25em;
   color: #123524;
@@ -462,21 +467,26 @@ button {
 
 #titulo {
   display: flex;
-  /* Enables Flexbox layout */
   align-items: center;
-  /* Centers content vertically */
-  justify-content: center;
-  /* Centers content horizontally */
+  justify-content: space-between;
+  text-align: center;
   flex-direction: column;
+}
+
+#titulo h3 {
+  padding: 0%;
+  margin-bottom: 0;
+}
+
+#titulo h4 {
+  padding: 0%;
+  margin-top: 0;
 }
 
 #volver {
   display: flex;
-  /* Enables Flexbox layout */
   align-items: center;
-  /* Centers content vertically */
   justify-content: center;
-  /* Centers content horizontally */
   flex-direction: column;
   margin: 15px;
 }
