@@ -367,8 +367,24 @@ header .fecha {
   flex-direction: row;
 }
 
-#hombre-baila, #mujer-baila {
-  width: 25%;
+.text-box {
+  border: 2px solid #5A4130;
+  /* Adds a solid border */
+  padding: 10px;
+  /* Adds space between the text and the border */
+  margin: 15px;
+  /* Adds space outside the border */
+  background-color: #F3D9D2;
+  /* Adds a light background color */
+  width: 50vw;
+  /* Sets the width of the box */
+  font-weight: bold;
+  /* You can add more styles like border-radius for rounded corners */
+}
+
+#hombre-baila,
+#mujer-baila {
+  height: 30vw;
 }
 
 #regalos {
@@ -508,15 +524,7 @@ button {
   text-align: center;
 }
 
-.text-box {
-  border: 2px solid #5A4130; /* Adds a solid border */
-  padding: 20px;          /* Adds space between the text and the border */
-  margin: 15px;           /* Adds space outside the border */
-  background-color: #F3D9D2; /* Adds a light background color */
-  width: 50vw;           /* Sets the width of the box */
-    font-weight: bold;
-/* You can add more styles like border-radius for rounded corners */
-}
+
 
 /*:root{
       --bg:#faf7f5;
