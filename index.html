@@ -98,69 +98,6 @@
     <h1 class="nombres">Rofita y Pato</h1>
   </section>
 
-  <!--<main class="wrap" id="invitation">
-    
-      <header>
-              <div class="cd-item"><div class="cd-num" id="seconds">--</div><div class="cd-label">Segundos</div></div>
-
-        
-        <div>
-          <h1>Rosario & Pablo</h1>
-          <div class="sub">Join us to celebrate — <strong id="wdate">Octubre 24, 2026</strong></div>
-        </div>
-      </header>
-
-      <div class="hero will-animate" data-animate>
-        <p class="desc">LALALALALALA We would be honored to have you with us on our special day. There will be food, music and lots of dancing. Please RSVP by email or phone. Below you will find the ceremony location, a countdown to the wedding, and bank details if you'd like to send a present.</p>
-
-        <div class="countdown" aria-live="polite" role="timer" title="Countdown to wedding" data-countdown="2026-10-24T18:00:00">
-          <div class="cd-item"><div class="cd-num" id="days">--</div><div class="cd-label">Days</div></div>
-          <div class="cd-item"><div class="cd-num" id="hours">--</div><div class="cd-label">Hours</div></div>
-          <div class="cd-item"><div class="cd-num" id="minutes">--</div><div class="cd-label">Minutes</div></div>
-          <div class="cd-item"><div class="cd-num" id="seconds">--</div><div class="cd-label">Seconds</div></div>
-        </div>
-
-        <div class="small" style="margin-top:12px">Ceremony: <strong>[Church / Hall Name]</strong> — Doors open at 14:30</div>
-      </div>
-
-      <div class="will-animate" data-animate style="margin-top:18px">
-        <h2 style="margin:0 0 8px 0; color:#4c2f2a">A few words</h2>
-        <p class="desc">We met on a rainy evening and discovered we both loved very bad coffee and long walks. Now we look forward to gathering our family and friends to start the next chapter together. Your presence is the best gift — but if you'd like to help with our honeymoon fund, banking details are on the right.</p>
-      </div>
-
-      <footer class="small">Need help? <a href="mailto:youremail@example.com">youremail@example.com</a> • Phone: +1 (555) 123-4567</footer>
-
-    <aside>
-      <div class="card will-animate" data-animate>
-        <h3>Location</h3>
-        <p class="small">[Venue Name]<br>[Street Address]<br>[City, Country]</p>
-        <div class="map" aria-hidden="false">
-          <iframe id="gmap" src="https://maps.app.goo.gl/DQY8GmLizjW4pZwC6" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-        <div class="actions small">
-          <a class="btn" href="#gmap" onclick="(function(){document.getElementById('gmap').scrollIntoView({behavior:'smooth'});})();return false;">Open map</a>
-          <a class="btn" href="https://www.google.com.uy/maps/place/Los+Tilos/@-34.8145413,-56.6762305,11z/data=!4m10!1m2!2m1!1slos+tilos!3m6!1s0x95a1d0854166c1b5:0xe8a22c7a58378835!8m2!3d-34.8145413!4d-56.3713599!15sCglsb3MgdGlsb3OSAQtldmVudF92ZW51ZeABAA!16s%2Fg%2F1vf9dk1k?hl=en&entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Directions</a>
-        </div>
-      </div>
-
-      <div class="card will-animate" data-animate>
-        <h3>Banking / Presents</h3>
-        <p class="small">If you'd like to contribute to our honeymoon fund or wedding gift, you can use the details below. Please include your name in the reference so we can thank you!</p>
-        <div class="bank">
-          Account name: <strong>[Full Name]</strong><br>
-          Bank: <strong>[Bank Name]</strong><br>
-          IBAN: <strong>XX00 0000 0000 0000 0000</strong><br>
-          SWIFT/BIC: <strong>XXXXX</strong>
-        </div>
-      </div>
-
-      <div class="card will-animate" data-animate>
-        <h3>RSVP</h3>
-        <p class="small">Please RSVP by <strong>May 15, 2026</strong>. Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-      </div>
-    </aside>
-  </main>-->
-
   <script>
     // --- Countdown logic (editable by changing data-countdown on the .countdown element) ---
     (function () {
@@ -197,35 +134,6 @@
       const tInt = setInterval(update, 1000);
     })();
 
-    // --- Simple JS animation starter using the Web Animations API ---
-    (function () {
-      function animateIntro() {
-        const els = document.querySelectorAll('[data-animate]');
-        els.forEach((el, i) => {
-          // give elements a stagger
-          setTimeout(() => {
-            el.classList.add('animated');
-            // additional animation using Web Animations API (subtle pop)
-            try {
-              el.animate([
-                { transform: 'translateY(8px) scale(.995)', opacity: 0 },
-                { transform: 'translateY(0) scale(1)', opacity: 1 }
-              ], { duration: 700, easing: 'cubic-bezier(.2,.9,.2,1)', fill: 'forwards' });
-            } catch (e) {/* fallback */ }
-          }, i * 120);
-        });
-      }
-      // run on load
-      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', animateIntro); else animateIntro();
-
-      // expose a hook for custom animations (for example, from your own JS or GSAP)
-      window.animateInvitation = animateIntro;
-    })();
-
-    // Accessibility focus: make interactive buttons keyboard-friendly
-    (function () {
-      document.querySelectorAll('.btn').forEach(b => b.addEventListener('keydown', e => { if (e.key === 'Enter') b.click(); }));
-    })();
   </script>
 </body>
 
