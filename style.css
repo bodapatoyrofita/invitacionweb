@@ -461,8 +461,26 @@ header .fecha {
   }
 }
 
-#despedida {
+#playlist {
   background-color: #CED9D2;
+  padding: 15px;
+  padding-top: 0;
+
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  flex-direction: column;
+}
+
+#playlist h3 {
+  font-weight: bold;
+  padding: 15px;
+  margin: 0;
+}
+
+#despedida {
   padding: 15px;
   padding-top: 0;
 
