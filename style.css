@@ -564,3 +564,24 @@ button {
   background-color: #123524;
   text-align: center;
 }
+
+#gif-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.4); /* fondo oscuro */
+  z-index: 9999;
+}
+
+#gif-popup img {
+  width: 300px;
+  max-width: 80%;
+}
+

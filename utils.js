@@ -117,3 +117,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach(el => observer.observe(el));
 });
+
+
+
+  const imageH = document.getElementById("hombre-baila");
+  const imageM = document.getElementById("mujer-baila");
+  
+  let clicksH = 0;
+  let clicksM = 0;
+
+  imageH.addEventListener("click", () => {
+    clicksH++;
+
+    if (clicksH % 6 === 0 & clicksM % 6 === 0 & clicksH != 0 & clicksM != 0) {
+      showGifPopup();
+    }
+  });
+
+  imageM.addEventListener("click", () => {
+    clicksM++;
+
+    if (clicksH % 6 === 0 & clicksM % 6 === 0 & clicksH != 0 & clicksM != 0) {
+      showGifPopup();
+    }
+  });
+
+  const popup = document.getElementById("gif-popup");
+  const gif = popup.querySelector("img");
+
+  function showGifPopup() {
+    popup.style.display = "flex";
+
+    const src = gif.src;
+    gif.src = "";
+    gif.src = src;
+
+    setTimeout(() => {
+      popup.style.display = "none";
+    }, 2000); // ⬅ ajustá a la duración real del GIF
+  }
