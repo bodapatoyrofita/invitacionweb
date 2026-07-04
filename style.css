@@ -5,7 +5,7 @@
 @font-face {
     font-family: "SephoraHayden";
     src:
-        url("../Sephora&Hayden.ttf") format("truetype");
+        url("../SephoraHayden.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -101,7 +101,7 @@ header .fecha {
 }
 
 .nombres {
-  font-family: "SephoraHayden", sans-serif;
+  font-family: "SephoraHayden";
   color: #DCC8B4;
   font-size: 6em;
   padding-bottom: 10px;
