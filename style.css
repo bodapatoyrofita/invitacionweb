@@ -520,7 +520,12 @@ header .fecha {
 
 #despedida p{
   padding-bottom: 0px;
-  margin-bottom: 0;
+  margin-bottom: 2em;
+}
+
+#despedida h1{
+  color: #ffffff;
+  text-shadow: 2px 2px rgba(255, 180, 67, 0.5);
 }
 
 button {
