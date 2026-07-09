@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box
+}
+
+@font-face {
+    font-family: "SephoraHayden";
+    src:
+        url("./SephoraHayden.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg), #f7d2d2);
+  font-family: "Poiret One", sans-serif;
+}
+
+h1 {
+  font-size: 14vw;
+  color: #123524;
+}
+
+h2 {
+  font-size: 10vw;
+  color: #123524;
+}
+
+h3 {
+  font-size: 7vw;
+  color: #123524;
+}
+
+h4 {
+  font-size: 6vw;
+  color: #123524;
+}
+
+p {
+  font-size: 5vw;
+  color: #123524;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+header {
+  background-color: #CED9D2;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  box-shadow: 0 0 10px 5px #5A4130;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+}
+
+header .logo {
+  margin: 0;
+  padding: 10px;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px #a5b8ac;
+}
+
+header #cora {
+  width: 5vw;
+  animation: headShake 5s infinite;
+}
+
+header .fecha {
+  margin: 0;
+  padding: 10px;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px #a5b8ac;
+}
+
+.nombres {
+  font-family: "SephoraHayden";
+  color: #DCC8B4;
+  font-size: 5em;
+  padding-bottom: 10px;
+  font-weight: lighter;
+  margin: 0;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes headShake {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  4% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  5% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  7.5% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  9% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  11% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  15% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+/* Vestimenta page specific styles */
+
+#titulo {
+  padding: 15px;
+  padding-top: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  flex-direction: column;
+}
+
+#titulo h3 {
+  padding: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+#titulo h4 {
+  padding: 0;
+  margin-top: 0;
+  font-weight: normal;
+}
+
+#vestimenta-no,
+#vestimenta-si {
+  padding: 15px;
+  padding-top: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  flex-direction: column;
+}
+
+#vestimenta-no {
+  background-color: #CED9D2;
+}
+
+#vestimenta-no h3,
+#vestimenta-si h3 {
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+
+#vestimenta-no ul,
+#vestimenta-si ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+#vestimenta-no li,
+#vestimenta-si li {
+  font-size: 4.5vw;
+  color: #123524;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(90, 65, 48, 0.2);
+}
+
+#vestimenta-si li:last-child,
+#vestimenta-no li:last-child {
+  border-bottom: none;
+}
+
+#volver {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 15px;
+}
+
+#volver button {
+  font-family: "Poiret One", sans-serif;
+  font-weight: bold;
+  margin-top: 0;
+  font-size: 1em;
+  padding: 10px 40px;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: #CED9D2;
+  background-color: #123524;
+  text-align: center;
+}

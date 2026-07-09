@@ -255,9 +255,6 @@ header .fecha {
   }
 }
 
-
-
-
 @keyframes headShake {
   from {
     transform: scale3d(1, 1, 1);
@@ -538,46 +535,6 @@ button {
   padding: 10px 20px;
 }
 
-#titulo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  flex-direction: column;
-}
-
-#titulo h3 {
-  padding: 0%;
-  margin-bottom: 0;
-}
-
-#titulo h4 {
-  padding: 0%;
-  margin-top: 0;
-}
-
-#volver {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 15px;
-}
-
-#volver button {
-  font-family: "Poiret One", sans-serif;
-  font-weight: bold;
-  margin-top: 5vh;
-  font-size: 1em;
-  padding: 10px 40px;
-  border-radius: 10px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  color: #CED9D2;
-  background-color: #123524;
-  text-align: center;
-}
-
 #gif-popup {
   position: fixed;
   top: 0;
@@ -597,4 +554,3 @@ button {
   width: 300px;
   max-width: 80%;
 }
-
