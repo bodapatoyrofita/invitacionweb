@@ -385,12 +385,10 @@ header .fecha {
   padding: clamp(10px, 3vw, 30px) clamp(8px, 2vw, 24px);
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  flex-direction: row;
   gap: clamp(8px, 2vw, 20px);
-  flex-wrap: wrap;
 }
 
 .text-box {
@@ -398,8 +396,9 @@ header .fecha {
   padding: clamp(8px, 2vw, 20px);
   margin: clamp(8px, 2vw, 24px);
   background-color: #F3D9D2;
-  width: min(85vw, 500px);
+  width: min(45vw, 500px);
   font-weight: bold;
+  text-align: center;
 }
 
 #hombre-baila,
@@ -433,20 +432,18 @@ header .fecha {
 
 #cuentas {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  flex-direction: row;
-  gap: clamp(8px, 2vw, 20px);
-  flex-wrap: wrap;
+  gap: clamp(5px, 2vw, 20px);
 }
 
 #regalo-left {
-  width: min(30%, 200px);
+  width: min(20%, 200px);
 }
 
 #regalo-right {
-  width: min(30%, 200px);
+  width: min(20%, 200px);
 }
 
 .animacion-regalo {
