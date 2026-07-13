@@ -18,27 +18,27 @@ body {
 }
 
 h1 {
-  font-size: 14vw;
+  font-size: clamp(2rem, 14vw, 8rem);
   color: #123524;
 }
 
 h2 {
-  font-size: 10vw;
+  font-size: clamp(1.6rem, 10vw, 6rem);
   color: #123524;
 }
 
 h3 {
-  font-size: 7vw;
+  font-size: clamp(1.2rem, 7vw, 4rem);
   color: #123524;
 }
 
 h4 {
-  font-size: 6vw;
+  font-size: clamp(1rem, 6vw, 3rem);
   color: #123524;
 }
 
 p {
-  font-size: 5vw;
+  font-size: clamp(0.9rem, 5vw, 2rem);
   color: #123524;
 }
 
@@ -65,19 +65,19 @@ header .container {
 
 header .logo {
   margin: 0;
-  padding: 10px;
+  padding: clamp(6px, 1.5vw, 16px);
   font-weight: bold;
   text-shadow: 3px 3px 2px #a5b8ac;
 }
 
 header #cora {
-  width: 5vw;
+  width: clamp(30px, 5vw, 80px);
   animation: headShake 5s infinite;
 }
 
 header .fecha {
   margin: 0;
-  padding: 10px;
+  padding: clamp(6px, 1.5vw, 16px);
   font-weight: bold;
   text-shadow: 3px 3px 2px #a5b8ac;
 }
@@ -85,8 +85,8 @@ header .fecha {
 .nombres {
   font-family: "SephoraHayden";
   color: #DCC8B4;
-  font-size: 5em;
-  padding-bottom: 10px;
+  font-size: clamp(2.5rem, 5em, 6rem);
+  padding-bottom: clamp(6px, 1.5vw, 20px);
   font-weight: lighter;
   margin: 0;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
@@ -126,13 +126,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
+  padding: clamp(6px, 1.5vw, 16px) clamp(12px, 3vw, 28px);
 }
 
 /* Vestimenta page specific styles */
 
 #titulo {
-  padding: 15px;
+  padding: clamp(15px, 4vw, 50px);
   padding-top: 0;
   margin: 0;
   display: flex;
@@ -146,17 +146,21 @@ button {
   padding: 0;
   margin-bottom: 0;
   font-weight: bold;
+  padding-left: clamp(10px, 4vw, 40px);
+  padding-right: clamp(10px, 4vw, 40px);
 }
 
 #titulo h4 {
   padding: 0;
   margin-top: 0;
   font-weight: normal;
+  padding-left: clamp(10px, 4vw, 40px);
+  padding-right: clamp(10px, 4vw, 40px);
 }
 
 #vestimenta-no,
 #vestimenta-si {
-  padding: 15px;
+  padding: clamp(15px, 4vw, 50px);
   padding-top: 0;
   margin: 0;
   display: flex;
@@ -175,13 +179,15 @@ button {
   font-weight: bold;
   padding: 0;
   margin-bottom: 0;
-  padding-bottom: 15px;
+  padding-bottom: clamp(8px, 2vw, 20px);
+  padding-left: clamp(10px, 4vw, 40px);
+  padding-right: clamp(10px, 4vw, 40px);
 }
 
 #vestimenta-no ul,
 #vestimenta-si ul {
   list-style: none;
-  padding: 0;
+  padding: 0 clamp(10px, 3vw, 30px);
   margin: 0;
   width: 100%;
   max-width: 600px;
@@ -189,9 +195,9 @@ button {
 
 #vestimenta-no li,
 #vestimenta-si li {
-  font-size: 4.5vw;
+  font-size: clamp(0.85rem, 4.5vw, 1.5rem);
   color: #123524;
-  padding: 8px 0;
+  padding: clamp(6px, 1.5vw, 14px) 0;
   border-bottom: 1px solid rgba(90, 65, 48, 0.2);
 }
 
@@ -206,15 +212,15 @@ button {
   justify-content: center;
   flex-direction: column;
   margin: 0;
-  padding: 15px;
+  padding: clamp(10px, 3vw, 30px);
 }
 
 #volver button {
   font-family: "Poiret One", sans-serif;
   font-weight: bold;
   margin-top: 0;
-  font-size: 1em;
-  padding: 10px 40px;
+  font-size: clamp(0.8rem, 1em, 1.4rem);
+  padding: clamp(8px, 1.5vw, 16px) clamp(24px, 5vw, 50px);
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);

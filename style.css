@@ -18,27 +18,27 @@ body {
 }
 
 h1 {
-  font-size: 14vw;
+  font-size: clamp(2rem, 14vw, 8rem);
   color: #123524;
 }
 
 h2 {
-  font-size: 10vw;
+  font-size: clamp(1.6rem, 10vw, 6rem);
   color: #123524;
 }
 
 h3 {
-  font-size: 7vw;
+  font-size: clamp(1.2rem, 7vw, 4rem);
   color: #123524;
 }
 
 h4 {
-  font-size: 6vw;
+  font-size: clamp(1rem, 6vw, 3rem);
   color: #123524;
 }
 
 p {
-  font-size: 5vw;
+  font-size: clamp(0.9rem, 5vw, 2rem);
   color: #123524;
 }
 
@@ -65,19 +65,19 @@ header .container {
 
 header .logo {
   margin: 0;
-  padding: 10px;
+  padding: clamp(6px, 1.5vw, 16px);
   font-weight: bold;
   text-shadow: 3px 3px 2px #a5b8ac;
 }
 
 header #cora {
-  width: 5vw;
+  width: clamp(30px, 5vw, 80px);
   animation: headShake 5s infinite;
 }
 
 header .fecha {
   margin: 0;
-  padding: 10px;
+  padding: clamp(6px, 1.5vw, 16px);
   font-weight: bold;
   text-shadow: 3px 3px 2px #a5b8ac;
 
@@ -91,6 +91,7 @@ header .fecha {
   background-repeat: no-repeat;
   background-position: center center;
   height: 50vh;
+  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -103,8 +104,8 @@ header .fecha {
 .nombres {
   font-family: "SephoraHayden";
   color: #DCC8B4;
-  font-size: 5em;
-  padding-bottom: 10px;
+  font-size: clamp(2.5rem, 5em, 6rem);
+  padding-bottom: clamp(6px, 1.5vw, 20px);
   font-weight: lighter;
   margin: 0;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
@@ -125,15 +126,16 @@ header .fecha {
 
 .countdown {
   display: flex;
-  gap: 25px;
+  gap: clamp(12px, 4vw, 40px);
   align-items: center;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cd-item {
   opacity: 0;
   background: #F3D9D2;
-  padding: 12px 14px;
+  padding: clamp(8px, 2vw, 18px) clamp(10px, 3vw, 24px);
   border-radius: 10px;
   min-width: 84px;
   text-align: center;
@@ -145,13 +147,13 @@ header .fecha {
 }
 
 .cd-num {
-  font-size: 20px;
+  font-size: clamp(16px, 20px, 28px);
   font-weight: 700;
   color: var(--accent)
 }
 
 .cd-label {
-  font-size: 12px;
+  font-size: clamp(10px, 12px, 16px);
   color: var(--muted);
   margin-top: 4px
 }
@@ -203,7 +205,7 @@ header .fecha {
 }
 
 #nos-casamos {
-  padding: 10px;
+  padding: clamp(10px, 3vw, 40px);
   margin: 0;
   display: flex;
   align-items: center;
@@ -212,9 +214,14 @@ header .fecha {
   flex-direction: column;
 }
 
+#nos-casamos p {
+  padding-left: clamp(10px, 5vw, 60px);
+  padding-right: clamp(10px, 5vw, 60px);
+}
+
 #ubicacion {
-  padding: 15px;
-  padding-top: 0%;
+  padding: clamp(15px, 4vw, 50px);
+  padding-top: 0;
   margin: 0;
   display: flex;
   align-items: center;
@@ -224,19 +231,27 @@ header .fecha {
   background-color: #CED9D2;
 }
 
+#ubicacion p {
+  padding-left: clamp(10px, 5vw, 60px);
+  padding-right: clamp(10px, 5vw, 60px);
+}
+
 #ubicacion h2,
 #vestimenta h2,
 #regalos h2 {
-  margin: 17px;
+  margin: clamp(10px, 3vw, 30px);
 }
 
 #los-tilos,
 #mapa-img {
-  width: 80%;
+  width: min(90%, 800px);
   border: 2px solid #5A4130;
   box-shadow: 10px 10px 5px #aaaaaa;
   opacity: 0;
+}
 
+#mapa-img {
+  height: clamp(250px, 50vw, 450px);
 }
 
 .scale-in-center {
@@ -290,7 +305,7 @@ header .fecha {
 }
 
 #vestimenta {
-  padding: 15px;
+  padding: clamp(15px, 4vw, 50px);
   padding-top: 0;
   margin: 0;
   display: flex;
@@ -303,15 +318,15 @@ header .fecha {
 #vestimenta h3 {
   padding: 0;
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: clamp(8px, 2vw, 24px);
 }
 
 #vestimenta button {
   font-family: "Poiret One", sans-serif;
   font-weight: bold;
   margin-top: 3vh;
-  font-size: 1em;
-  padding: 10px 40px;
+  font-size: clamp(0.8rem, 1em, 1.4rem);
+  padding: clamp(8px, 1.5vw, 16px) clamp(24px, 5vw, 50px);
   border-radius: 10px;
   border: 2px solid rgba(0, 0, 0, 0.5);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
@@ -324,26 +339,26 @@ header .fecha {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 15px;
+  gap: clamp(8px, 2vw, 24px);
   align-items: center;
   justify-items: center;
-  width: 80%;
+  width: min(90%, 900px);
   margin: 0 auto;
 }
 
 .grid-img {
-  width: 90%;
+  width: min(90%, 400px);
   border: 2px solid #5A4130;
   box-shadow: 10px 10px 5px #aaaaaa;
   border-radius: 8px;
 }
 
 .grid-text {
-  font-size: 4vw;
+  font-size: clamp(0.85rem, 4vw, 1.6rem);
   font-weight: bold;
   color: #123524;
   margin: 0;
-  padding: 10px;
+  padding: clamp(6px, 1.5vw, 16px);
   text-align: center;
 }
 
@@ -367,40 +382,34 @@ header .fecha {
 
 #solo-adultos {
   background-color: #CED9D2;
-  padding-top: 0;
-
+  padding: clamp(10px, 3vw, 30px) clamp(8px, 2vw, 24px);
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   flex-direction: row;
+  gap: clamp(8px, 2vw, 20px);
+  flex-wrap: wrap;
 }
 
 .text-box {
   border: 2px solid #5A4130;
-  /* Adds a solid border */
-  padding: 10px;
-  /* Adds space between the text and the border */
-  margin: 15px;
-  /* Adds space outside the border */
+  padding: clamp(8px, 2vw, 20px);
+  margin: clamp(8px, 2vw, 24px);
   background-color: #F3D9D2;
-  /* Adds a light background color */
-  width: 50vw;
-  /* Sets the width of the box */
+  width: min(85vw, 500px);
   font-weight: bold;
-  /* You can add more styles like border-radius for rounded corners */
 }
 
 #hombre-baila,
 #mujer-baila, #formulario {
-  height: 30vw;
+  height: clamp(100px, 30vw, 280px);
 }
 
 #regalos {
-  padding: 15px;
+  padding: clamp(15px, 4vw, 50px);
   padding-top: 0;
-
   margin: 0;
   display: flex;
   align-items: center;
@@ -409,12 +418,17 @@ header .fecha {
   flex-direction: column;
 }
 
+#regalos p {
+  padding-left: clamp(10px, 5vw, 60px);
+  padding-right: clamp(10px, 5vw, 60px);
+}
+
 #regalos p,
 #regalos h3 {
   font-weight: bold;
   padding: 0;
   margin: 0;
-  padding-bottom: 15px;
+  padding-bottom: clamp(8px, 2vw, 20px);
 }
 
 #cuentas {
@@ -423,14 +437,16 @@ header .fecha {
   justify-content: center;
   text-align: center;
   flex-direction: row;
+  gap: clamp(8px, 2vw, 20px);
+  flex-wrap: wrap;
 }
 
 #regalo-left {
-  width: 30%;
+  width: min(30%, 200px);
 }
 
 #regalo-right {
-  width: 30%;
+  width: min(30%, 200px);
 }
 
 .animacion-regalo {
@@ -473,9 +489,8 @@ header .fecha {
 
 #playlist {
   background-color: #CED9D2;
-  padding: 15px;
+  padding: clamp(15px, 4vw, 50px);
   padding-top: 0;
-
   margin: 0;
   display: flex;
   align-items: center;
@@ -486,20 +501,33 @@ header .fecha {
 
 #playlist h3 {
   font-weight: bold;
-  padding: 15px;
+  padding: clamp(8px, 2vw, 24px);
   margin: 0;
 }
 
-#rsvp {
-  padding: 15px;
-  padding-top: 0;
+#playlist p {
+  padding-left: clamp(10px, 5vw, 60px);
+  padding-right: clamp(10px, 5vw, 60px);
+}
 
+#playlist iframe {
+  max-width: min(90%, 600px);
+}
+
+#rsvp {
+  padding: clamp(15px, 4vw, 50px);
+  padding-top: 0;
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: end;
   text-align: center;
   flex-direction: column;
+}
+
+#rsvp p {
+  padding-left: clamp(10px, 5vw, 60px);
+  padding-right: clamp(10px, 5vw, 60px);
 }
 
 #rsvp h2, #rsvp p{
@@ -509,7 +537,7 @@ header .fecha {
 
 
 #despedida {
-  padding: 15px;
+  padding: clamp(15px, 4vw, 50px);
   padding-top: 0;
   background-color: #CED9D2;
   margin: 0;
@@ -522,7 +550,9 @@ header .fecha {
 
 #despedida p{
   padding-bottom: 0px;
-  margin-bottom: 30px;
+  margin-bottom: clamp(15px, 4vw, 40px);
+  padding-left: clamp(10px, 5vw, 60px);
+  padding-right: clamp(10px, 5vw, 60px);
 }
 
 #despedida h1{
@@ -532,12 +562,9 @@ header .fecha {
 
 button {
   display: flex;
-  /* Enables Flexbox layout */
   align-items: center;
-  /* Centers content vertically */
   justify-content: center;
-  /* Centers content horizontally */
-  padding: 10px 20px;
+  padding: clamp(6px, 1.5vw, 16px) clamp(12px, 3vw, 28px);
 }
 
 #gif-popup {
@@ -551,11 +578,10 @@ button {
   align-items: center;
   justify-content: center;
 
-  background: rgba(0, 0, 0, 0.4); /* fondo oscuro */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 9999;
 }
 
 #gif-popup img {
-  width: 300px;
-  max-width: 80%;
+  width: min(300px, 80%);
 }
